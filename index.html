@@ -5,8 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <nav id="navbar" class="left">
+        <ul class="menu">
+            <li>Home</li>
+            <li>Services</li>
+            <li>News</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <input type="button" value="=" />
+    <div class="right">
+        <main>
+            <img src="logo.jpg" alt="logo" id="logo"/>
+            <div class="desc-box">
+                <p class="title">Lorem ipsum dolor sit asmet?</p>
+                <div class="box-desc-text">
+                    <p class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique consequat placerat. Vestibulum auctor pellentesque sem, eu posuere erat hendrerit quis. Maecenas vel consequat turpis. Nam facilisis, ligula in mattis sodales, augue justo tristique nulla, sed lacinia ante eros ut mi. Morbi vitae diam augue. Aliquam vel mauris a nibh auctor commodo. Praesent et nisi eu justo eleifend convallis. Quisque suscipit maximus vestibulum. Phasellus congue mollis orci, sit amet luctus augue tristique eu. Donec vulputate odio neque, sed semper turpis pellentesque a.</p>
+                </div>
+            </div>
+
+            <div id="content">
+                <div class="item">
+                    <p class="title-item">
+                        Lorem ipsum dolor sit amet
+                    </p>
+                    <div class="details">
+                        <div class="top-details">
+                            <img src="css.jpg" alt="css logo" class="img-detail" />
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit accumsan. Aenean consequat condimentum</span>
+                        </div>
+                        <p> velit ut tempor ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p class="title-item">
+                        Lorem ipsum dolor sit amet
+                    </p>
+                    <div class="details">
+                        <div class="top-details">
+                            <img src="html.jpg" alt="css logo" class="img-detail" />
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit accumsan. Aenean consequat condimentum</span>
+                        </div>
+                        <p> velit ut tempor ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p class="title-item">
+                        Lorem ipsum dolor sit amet
+                    </p>
+                    <div class="details">
+                        <div class="top-details">
+                            <img src="url.jpg" alt="css logo" class="img-detail" />
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui sodales, faucibus libero ut, posuere felis. Donec imperdiet suscipit accumsan. Aenean consequat condimentum</span>
+                        </div>
+                        <p> velit ut tempor ullamcorper ultricies. Donec feugiat velit nulla, vel sodales est ullamcorper id. Aenean consequat condimentum velit ut tempor. Nam porta massa in metus bibendum congue. Pellentesque ultrices vestibulum mattis.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>Copyright © 2021</footer>
+    </div>
 </body>
+<script>
+    const button_navbar = document.querySelector("input[type='button'][value='=']")
+    const navbar = document.getElementById("navbar")
+    button_navbar.onclick = (e) => {
+        e.stopPropagation()
+        navbar.classList.toggle("active")
+        button_navbar.classList.add("hidden")
+    }
+
+    navbar.onclick = (e) => {
+        e.stopPropagation()
+    }
+
+    window.addEventListener('click', () => {
+        button_navbar.classList.remove("hidden")
+        navbar.classList.remove("active")
+    })
+    
+</script>
 </html>
